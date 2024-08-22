@@ -1,38 +1,48 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Botão de Pesquisa e Menu Suspenso</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <button aria-controls="mobile-menu" class="icon-button" id="mobile-menu-toggle" aria-expanded="false" aria-label="Menu">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M2.25 5A.75.75 0 0 1 3 4.25h18a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 5m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75" clip-rule="evenodd"></path>
-            </svg>
-        </button>
-    
-        <div class="search-wrapper">
-            <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
-            <button id="search-submit">
-                <span class="search-icon">🔍</span>
-                <span class="search-text">Buscar</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu e Pesquisa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Menu Toggle -->
+            <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="menu-icon">
+                    <path fill-rule="evenodd" d="M2.25 5A.75.75 0 0 1 3 4.25h18a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 5m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75" clip-rule="evenodd"></path>
+                </svg>
             </button>
+
+            <!-- Search Wrapper -->
+            <div class="search-wrapper">
+                <button class="search-button" aria-label="Buscar na loja">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" class="search-icon">
+                        <g transform="scale(1 -1) rotate(-45 -11.93502884 -2)" stroke="currentColor" stroke-width="1.65" fill="none" fill-rule="evenodd">
+                            <circle cx="7.70710678" cy="7.70710678" r="7"></circle>
+                            <path d="M15.2071068 8.62132034h5.6923881" stroke-linecap="square"></path>
+                        </g>
+                    </svg>
+                </button>
+                <input type="text" id="search-input" placeholder="Digite seu jogo,...">
+                <button id="search-submit">Buscar</button>
+            </div>
+
+            <!-- Profile Menu Button -->
+            <button class="profile-menu-button" aria-controls="profile-menu" aria-expanded="false" aria-label="Menu de Conta">
+                <span class="profile-text">8D</span>
+            </button>
+
+            <!-- Profile Menu -->
+            <div id="profile-menu" class="dropdown-list">
+                <a href="#">Perfil</a>
+                <a href="#">Configurações</a>
+                <a href="#">Sair</a>
+            </div>
         </div>
-    
-        <button aria-label="Menu de Conta" class="profile-menu-button" aria-controls="profile-menu" aria-expanded="false" title="Deyverson_yuri12">
-            <span class="profile-icon"></span>
-            <span class="Bora de D">
-                8D
-            </span>
-            <span class="profile-text"></span>
-        </button>
-        <div id="profile-menu" class="dropdown-list">
-            <a href="#">Perfil</a>
-            <a href="#">Configurações</a>
-            <a href="#">Sair</a>
-        </div>
-    
-        <script src="script.js"></script>
-    </body>
-    </html>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>
