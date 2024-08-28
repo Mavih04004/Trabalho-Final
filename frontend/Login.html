@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width = device-width,initialscale = 1.0">
-        <title>Login</title>
-        <link rel = "stylesheet" href = "style.css">
-    </head>
-    <body>
-        <div class = "container">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <form action="">
             <h1>Login</h1>
-            <form action = "#" method="post"></form>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <box-icon type='solid' name='user' color="white"></box-icon> 
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required> 
+                <box-icon name='lock-alt' type='solid' color="white"></box-icon>
             </div>
 
-            <div class = "form-group">
-            <label for "Username"> Username:</label>
-            <input type = "Text" id = "Username" name = "Username" required>
+            <div class="remember-forget">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
 
+            <div class="register-link">
+                <p>Don't have an account?<br> <a href="#">Register</a></p>
             </div>
-            <div class = "form group">
-                <label for="Senha">Senha:</label>
-                <input type = "Senha" id = "Senha" name = "Senha" required>
-            </div>
-            <button type = "Acessar">Login</button>
         </form>
-        <p>Não tem conta?<a href = "Cadastro.html>Registro aqui </a></p>
+    </div>
 
-    </body>
-</html>                                                                                                   
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+   
+
+
+</body>
+</html>
