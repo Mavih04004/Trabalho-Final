@@ -5,11 +5,12 @@ body {
     background-color: #f5f5f5;
 }
 
+/* Cabeçalho */
 header {
     background-color: #ffffff;
     border-bottom: 1px solid #ddd;
     padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -68,19 +69,19 @@ header {
 .dropdown-list {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 5px;
     right: 0;
     background-color: #6405fd;
     border: 1px solid #3a01be;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     min-width: 150px;
 }
 
 .dropdown-list a {
     display: block;
-    padding: 10px 15px;
+    padding: 20px 15px;
     color: #ffffff;
     text-decoration: none;
 }
@@ -92,4 +93,124 @@ header {
 /* Mostrar o menu quando ativado */
 .profile-menu-button[aria-expanded="true"] + .dropdown-list {
     display: block;
+}
+
+/* Barra Lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    color: #007bff;
+}
+
+/* Conteúdo Principal */
+main {
+    margin-left: 270px; /* Espaço suficiente para a sidebar */
+    padding: 20px;
+}
+
+/* Bloco de Imagens de Jogos */
+.game-gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.game-gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    overflow-x: auto; /* Permitir rolagem horizontal */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 10px; /* Adicionar um pouco de espaçamento interno */
+}
+
+.game-item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.image-normal, .image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.image-hover {
+    opacity: 0;
+}
+
+.game-item:hover .image-hover {
+    opacity: 1;
+}
+
+.game-item:hover .image-normal {
+    opacity: 0;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.game-item:hover .game-overlay {
+    opacity: 1;
+}
+
+.game-overlay p {
+    margin: 0;
+    font-size: 1em;
 }
