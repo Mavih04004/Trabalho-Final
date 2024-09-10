@@ -1,162 +1,143 @@
+/* Reset básico */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     color: #333;
     background-color: #f5f5f5;
-}
-
-/* Cabeçalho */
-header {
-    background-color: #ffffff;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    background-color: #b700ff;
+    color: #fff;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
+  }
+  
+  .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.menu-toggle, .search-button, .profile-menu-button {
+  }
+  
+  /* Estilo dos botões */
+  .menu-toggle,
+  .profile-menu-button,
+  .search-submit {
     background: none;
     border: none;
+    color: #fff;
     cursor: pointer;
     padding: 8px;
-}
-
-.menu-icon, .search-icon {
+  }
+  
+  .menu-icon,
+  .search-icon {
     width: 24px;
     height: 24px;
-    fill: #6900f3;
-}
-
-.search-wrapper {
+    fill: #fff;
+  }
+  
+  /* Estilo do wrapper de pesquisa */
+  .search-wrapper {
     display: flex;
     align-items: center;
     flex-grow: 1;
     max-width: 500px;
     margin: 0 20px;
-}
-
-#search-input {
+  }
+  
+  .search-input {
     flex-grow: 1;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     margin-right: 8px;
-}
-
-#search-submit {
+  }
+  
+  .search-submit {
     background-color: #4901a8;
     color: #fff;
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
     cursor: pointer;
-}
-
-.profile-menu-button .profile-text {
+  }
+  
+  /* Estilo do botão do menu de perfil */
+  .profile-menu-button .profile-text {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
-}
-
-.dropdown-list {
+  }
+  
+  /* Menu dropdown de perfil */
+  .dropdown-list {
     display: none;
     position: absolute;
-    top: 5px;
+    top: 40px;
     right: 0;
     background-color: #6405fd;
+    color: #fff;
     border: 1px solid #3a01be;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     min-width: 150px;
-}
-
-.dropdown-list a {
+  }
+  
+  .dropdown-item {
     display: block;
-    padding: 20px 15px;
-    color: #ffffff;
+    padding: 10px 15px;
+    color: #fff;
     text-decoration: none;
-}
-
-.dropdown-list a:hover {
+  }
+  
+  .dropdown-item:hover {
     background-color: #131e5a79;
-}
-
-/* Mostrar o menu quando ativado */
-.profile-menu-button[aria-expanded="true"] + .dropdown-list {
+  }
+  
+  /* Mostrar o menu quando ativado */
+  .profile-menu-button[aria-expanded="true"] + .dropdown-list {
     display: block;
-}
-
-/* Barra Lateral */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #f4f4f4;
+  }
+  
+  /* Conteúdo Principal */
+  .main-content {
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    z-index: 100;
-}
-
-.sidebar h2 {
-    margin-top: 0;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 10px 0;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
-
-.sidebar ul li a:hover {
-    color: #007bff;
-}
-
-/* Conteúdo Principal */
-main {
-    margin-left: 270px; /* Espaço suficiente para a sidebar */
-    padding: 20px;
-}
-
-/* Bloco de Imagens de Jogos */
-.game-gallery {
-    padding: 20px;
-    text-align: center;
-}
-
-.game-gallery h2 {
-    font-size: 2em;
+  }
+  
+  /* Estilo do título da galeria */
+  .gallery-title {
     margin-bottom: 20px;
-}
-
-.game-container {
+    text-align: center;
+  }
+  
+  /* Estilo do container dos jogos */
+  .game-container {
     display: flex;
-    overflow-x: auto; /* Permitir rolagem horizontal */
-    gap: 20px; /* Espaçamento entre os itens */
-    padding: 10px; /* Adicionar um pouco de espaçamento interno */
-}
-
-.game-item {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative; /* Adicionado para que o botão posicionado absoluto fique relativo ao container */
+  }
+  
+  /* Container para o botão ao lado dos jogos */
+  .game-button-container {
+    position: absolute;
+    top: 0; /* Ajuste conforme necessário */
+    right: -60px; /* Ajuste conforme necessário para o espaço entre o botão e os jogos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilo do item do jogo */
+  .game-item {
     position: relative;
     width: 300px;
     height: 200px;
@@ -165,9 +146,11 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-}
-
-.image-normal, .image-hover {
+  }
+  
+  /* Estilo das imagens do item do jogo */
+  .image-normal,
+  .image-hover {
     position: absolute;
     top: 0;
     left: 0;
@@ -175,42 +158,72 @@ main {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s;
-}
-
-.image-hover {
+  }
+  
+  .image-hover {
     opacity: 0;
-}
-
-.game-item:hover .image-hover {
+  }
+  
+  .game-item:hover .image-hover {
     opacity: 1;
-}
-
-.game-item:hover .image-normal {
+  }
+  
+  .game-item:hover .image-normal {
     opacity: 0;
-}
-
-.game-item:hover {
+  }
+  
+  .game-item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.game-overlay {
+  }
+  
+  .game-overlay {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: rgba(0, 0, 0, 0.6);
-    color: white;
+    color: #fff;
+    text-align: center;
     padding: 10px;
-    border-radius: 4px;
-    opacity: 0;
     transition: opacity 0.3s;
-}
-
-.game-item:hover .game-overlay {
+    opacity: 0;
+  }
+  
+  .game-item:hover .game-overlay {
     opacity: 1;
-}
-
-.game-overlay p {
+  }
+  
+  .game-overlay p {
     margin: 0;
     font-size: 1em;
-}
+  }
+  
+  /* Estilo do botão "next slide" */
+  .css-l4c6vj {
+    position: relative;
+    background-color: #4901a8;
+    border: none;
+    top: 60px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  }
+  
+  .css-l4c6vj:hover {
+    background-color: #3a01be;
+  }
+  
+  .svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+  

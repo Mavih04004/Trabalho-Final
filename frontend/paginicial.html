@@ -1,85 +1,157 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Completa com Menu, Barra Lateral e Bloco de Jogos</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menu">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="menu-icon">
-                    <path fill-rule="evenodd" d="" clip-rule="evenodd"></path>
-                </svg>
-            </button>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <button
+          class="menu-toggle"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Menu"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            class="menu-icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
 
-            <div class="search-wrapper">
-                <button class="search-button" aria-label="Buscar na loja">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" class="search-icon">
-                        <g transform="scale(1 -1) rotate(-45 -11.93502884 -2)" stroke="currentColor" stroke-width="1.65" fill="none" fill-rule="evenodd">
-                            <circle cx="7.70710678" cy="7.70710678" r="7"></circle>
-                            <path d="M15.2071068 8.62132034h5.6923881" stroke-linecap="square"></path>
-                        </g>
-                    </svg>
-                </button>
-                <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
-                <button id="search-submit">Buscar</button>
-            </div>
-
-            <button class="profile-menu-button" aria-controls="profile-menu" aria-expanded="false" aria-label="Menu de Conta">
-                <span class="profile-text">8D</span>
-            </button>
-
-            <div id="profile-menu" class="dropdown-list">
-                <a href="#">Perfil</a>
-                <a href="#">Configurações</a>
-                <a href="#">Sair</a>
-            </div>
+        <div class="search-wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 21 20"
+            class="search-icon"
+          >
+            <g
+              transform="scale(1 -1) rotate(-45 -11.93502884 -2)"
+              stroke="currentColor"
+              stroke-width="1.65"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <circle cx="7.70710678" cy="7.70710678" r="7"></circle>
+              <path
+                d="M15.2071068 8.62132034h5.6923881"
+                stroke-linecap="square"
+              ></path>
+            </g>
+          </svg>
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Digite sua pesquisa..."
+          />
+          <button id="search-submit" class="search-submit">Buscar</button>
         </div>
-    </header>
-    <aside class="sidebar">
-        <h2>Menu Lateral</h2>
-        <ul>
-            <li><a href="#">Página Inicial</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </aside>
 
-    <main>
-        <section class="game-gallery">
-            <h2>Galeria de Jogos</h2>
-            <div class="game-container">
-                <div class="game-item">
-                    <img src="https://sm.ign.com/ign_br/cover/d/dragon-bal/dragon-ball-sparking-zero_h4g1.jpg" alt="DRAGON BALL: Sparking! ZERO" class="image-normal">
-                    <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/02/dragon-ball-sparking-zero-capa.jpg" alt="DRAGON BALL: Sparking! ZERO" class="image-hover">
-                    <div class="game-overlay">
-                        <p>DRAGON BALL: Sparking! ZERO</p>
-                    </div>
-                </div>
-            </div>
-            <div class="game-container">
-                <div class="game-item">
-                    <img src="https://cdn1.epicgames.com/offer/14a28903e3d14bd5aa3e6dbf10868126/EN_EGST_StoreLandscape_2560x1440_2560x1440-35f77ef342bb2d3a3efac25f4fa4d4e0" alt="Assassin's Creed Shadows" class="image-normal">
-                    <img src="https://sm.ign.com/ign_br/gallery/a/assassins-/assassins-creed-shadows-reveal-screenshots_ehj7.jpg" alt="Assassin's Creed Shadows" class="image-hover">
-                    <div class="game-overlay">
-                        <p>Assassin's Creed Shadows</p>
-                    </div>
-                </div>
-            </div> <div class="game-container">
-                <div class="game-item">
-                    <img src="https://sm.ign.com/ign_br/cover/d/dragon-bal/dragon-ball-sparking-zero_h4g1.jpg" alt="DRAGON BALL: Sparking! ZERO" class="image-normal">
-                    <img src="https://www.adrenaline.com.br/wp-content/uploads/2024/02/dragon-ball-sparking-zero-capa.jpg" alt="DRAGON BALL: Sparking! ZERO" class="image-hover">
-                    <div class="game-overlay">
-                        <p>DRAGON BALL: Sparking! ZERO</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <button
+          class="profile-menu-button"
+          aria-controls="profile-menu"
+          aria-expanded="false"
+          aria-label="Menu de Conta"
+        >
+          <span class="profile-text">8D</span>
+        </button>
+
+        <div id="profile-menu" class="dropdown-list">
+          <a href="#" class="dropdown-item">Perfil</a>
+          <a href="#" class="dropdown-item">Configurações</a>
+          <a href="#" class="dropdown-item">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <h2 class="gallery-title">Galeria de Jogos</h2>
+      <div class="game-container">
+        <!-- Itens dos jogos -->
+        <div class="game-item">
+          <img
+            src="https://sm.ign.com/ign_br/cover/d/dragon-bal/dragon-ball-sparking-zero_h4g1.jpg"
+            alt="DRAGON BALL: Sparking! ZERO"
+            class="image-normal"
+          />
+          <img
+            src="https://cloud.estacaonerd.com/wp-content/uploads/2024/03/21064630/capsule_616x353.jpg"
+            alt="DRAGON BALL: Sparking! ZERO"
+            class="image-hover"
+          />
+          <div class="game-overlay">
+            <p>DRAGON BALL: Sparking! ZERO</p>
+          </div>
+        </div>
+
+        <div class="game-item">
+          <img
+            src="https://cdn1.epicgames.com/offer/14a28903e3d14bd5aa3e6dbf10868126/EN_EGST_StoreLandscape_2560x1440_2560x1440-35f77ef342bb2d3a3efac25f4fa4d4e0"
+            alt="Assassin's Creed Shadows"
+            class="image-normal"
+          />
+          <img
+            src="https://sm.ign.com/ign_br/gallery/a/assassins-/assassins-creed-shadows-reveal-screenshots_ehj7.jpg"
+            alt="Assassin's Creed Shadows"
+            class="image-hover"
+          />
+          <div class="game-overlay">
+            <p>Assassin's Creed Shadows</p>
+          </div>
+        </div>
+
+        <div class="game-item">
+          <img
+            src="https://d5gag3xtge2og.cloudfront.net/producao/34252441/G/black-myth--wukong-ps5.webp"
+            alt="Black Myth: Wukong"
+            class="image-normal"
+          />
+          <img
+            src="https://blackcompany.com.br/wp-content/uploads/2024/08/Capas-Black-1-3.png"
+            alt="Black Myth: Wukong"
+            class="image-hover"
+          />
+          <div class="game-overlay">
+            <p>Black Myth: Wukong</p>
+          </div>
+        </div>
+
+        <div class="game-item">
+          <img
+            src="https://cdn.oneesports.gg/cdn-data/2024/04/StarWarsOutlaws_OfficialPoster.jpg"
+            alt="Star Wars Outlaws"
+            class="image-normal"
+          />
+          <img
+            src="https://cdn1.epicgames.com/offer/e860fa919120430ca12c557bb676bc6a/EGST_StoreLandscape_2560x1440_2560x1440-e7beda03979167bed00fb2c73bb7998a"
+            alt="Star Wars Outlaws"
+            class="image-hover"
+          />
+          <div class="game-overlay">
+            <p>Star Wars Outlaws</p>
+          </div>
+        </div>
+          <button class="css-l4c6vj" class="game-button-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="svg">
+              <path d="M6 18L18 12L6 6v12z"></path>
+            </svg>
+          </button>
+      </div>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
