@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width = device-width,initialscale = 1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylemavih.css">
+    <style>
+    </style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Login</h1>
-        <form action="#" method="post"></form>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Usuário" required>
+                <box-icon type='solid' name='user' color="white"></box-icon> 
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Senha" required>
+                <box-icon name='lock-alt' type='solid' color="white"></box-icon>
+            </div>
+
+            <div class="remember-forget">
+                <a href="#">Esqueceu a Senha?</a>
+            </div>
+            <button type="submit" class="btn">Entrar</button>
+
+            <div class="register-link">
+                <p>Não possui conta?<br> <a href="Cadastro.html">Cadastro</a></p>
+            </div>
+        </form>
     </div>
 
-    <div class="form-group">
-        <label for "Username"> Username:</label>
-        <input type="Text" id="Username" name="Username" required>
-
-    </div>
-    <div class="form group">
-        <label for="Senha">Senha:</label>
-        <input type="Senha" id="Senha" name="Senha" required>
-    </div>
-    <button type="Acessar">Login</button>
-    </form>
-    <p><a href="Cadastro.html">Registro aqui Não tem conta?</a></p>
-
+    
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>
