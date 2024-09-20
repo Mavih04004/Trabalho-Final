@@ -1,0 +1,19 @@
+[X] Criar configuração com o banco de dados
+[X] Testar a conexão
+    [X] Criar arquivo app.js
+    [X] Resolver os errinhos
+[X] Criar modelo
+    [X] Copiar o arquivo base
+    [X] Renomear o arquivo e as colunas
+    [X] Trocar os tipos das colunas
+[X] Criar controlador
+    [X] Copiar o arquivo base
+    [X] Ver se precisa de mais funções, 
+        e se alguma lá é desnecessária
+    [X] Modificar as funções pro seu caso
+[X] Criar rotas
+    [X] Copiar do arquivo base
+    [X] Ver se tem todas as rotas necessárias
+    [X] Ver se faltam rotas
+[ ] Testar rotas:
+    [ ] Fazendo chamadas com Postman
