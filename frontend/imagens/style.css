@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #b700ff;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Estilo dos botões */
+.menu-toggle,
+.profile-menu-button,
+.search-submit {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.menu-icon,
+.search-icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+/* Estilo do wrapper de pesquisa */
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 20px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.search-submit {
+    background-color: #4901a8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* Estilo do botão do menu de perfil */
+.profile-menu-button .profile-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Menu dropdown de perfil */
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #6405fd;
+    color: #fff;
+    border: 1px solid #3a01be;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-item:hover {
+    background-color: #131e5a79;
+}
+
+/* Mostrar o menu quando ativado */
+.profile-menu-button[aria-expanded="true"] + .dropdown-list {
+    display: block;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+}
+
+.gallery-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo do container dos jogos */
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+}
+
+/* Container para o botão ao lado dos jogos */
+.game-button-container {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4901a8;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.game-button-container:hover {
+    background-color: #3a01be;
+}
+
+.svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
