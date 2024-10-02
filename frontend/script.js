@@ -1,17 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const profileButton = document.querySelector('.profile-menu-button');
-    const profileMenu = document.getElementById('profile-menu');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const track = document.querySelector('.carousel-track');
+let currentIndex = 0;
 
-    profileButton.addEventListener('click', function () {
-        const expanded = profileButton.getAttribute('aria-expanded') === 'true';
-        profileButton.setAttribute('aria-expanded', !expanded);
-        profileMenu.style.display = expanded ? 'none' : 'block';
-    });
-
-    document.addEventListener('click', function (event) {
-        if (!profileButton.contains(event.target) && !profileMenu.contains(event.target)) {
-            profileButton.setAttribute('aria-expanded', 'false');
-            profileMenu.style.display = 'none';
-        }
-    });
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : track.children.length - 1;
+    updateCarousel();
 });
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < track.children.length - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+});
+
+function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
