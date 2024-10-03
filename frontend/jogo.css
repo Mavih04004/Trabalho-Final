@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #9b59b6; /* Cor de fundo semelhante ao roxo */
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #fff; /* Botão branco */
+    border: none;
+    color: #9b59b6; /* Cor do texto do botão */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #e7e7e7; /* Cor de fundo ao passar o mouse */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-info {
+    display: flex; /* Alinha imagem e preço horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+img {
+    max-width: 300px; /* Define uma largura máxima para a imagem */
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px; /* Espaçamento entre a imagem e o preço */
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column; /* Alinha o preço e o botão verticalmente */
+}
+
+#comprar {
+    background-color: #9b59b6; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+#comprar:hover {
+    background-color: #8e44ad; /* Cor do botão ao passar o mouse */
+}
+
+#imagens-adicionais {
+    margin-top: 20px; /* Espaçamento superior para a seção de imagens adicionais */
+}
+
+.carousel {
+    position: relative; /* Necessário para posicionar os botões corretamente */
+    max-width: 400px; /* Largura máxima do carrossel */
+    margin: auto; /* Centraliza o carrossel na página */
+    overflow: hidden; /* Oculta imagens fora do contêiner */
+}
+
+.carousel-images {
+    display: flex; /* Coloca as imagens em linha */
+    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
+    width: 400%; /* Largura total do carrossel */
+}
+
+.carousel-images img {
+    width: 100%; /* As imagens ocupam 100% do espaço do carrossel */
+    height: auto;
+}
+/* ... (restante do seu CSS permanece inalterado) */
+
+.carousel {
+    position: relative; /* Necessário para posicionar os botões corretamente */
+    max-width: 400px; /* Largura máxima do carrossel */
+    margin: 20px 0 20px 0; /* Centraliza o carrossel na página e remove a margem lateral */
+    overflow: hidden; /* Oculta imagens fora do contêiner */
+}
+
+/* ... (restante do seu CSS permanece inalterado) */
+
+button.prev, button.next {
+    position: absolute; /* Para posicionar os botões sobre as imagens */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar corretamente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1; /* Garante que os botões fiquem sobre as imagens */
+}
+
+button.prev {
+    left: 10px; /* Alinha o botão "anterior" à esquerda */
+}
+
+button.next {
+    right: 10px; /* Alinha o botão "próximo" à direita */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
