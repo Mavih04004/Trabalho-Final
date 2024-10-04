@@ -58,6 +58,23 @@ const UsuarioController = {
             res.status(500).send(error.message);
         }
     },
+    login: async (req, res) => {
+        try {
+            const usuario = await Usuario.findOne({
+                where: {
+                    email: req.body.email // Usa o e-mail que veio do frontend
+                }
+            });
+
+            if(req.body.email == usuario.email && req.body.senha == usuario.senha){
+                res.json(usuario)
+            } else {
+                res.status(400).send('Email ou senha incorreta')
+            }
+        } catch (error) {
+            res.status(500).send(error.message);
+        }
+    },
 
     // Implementação das funções de controle de estoque
     // registrarEntrada e registrarSaida
