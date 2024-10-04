@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Jogo Online</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Jogo Incrível</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Destaques</a></li>
+                <li><a href="#preco">Jogos</a></li>
+                <li><a href="#comprar">Cadastrar</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Pesquisar jogos..." aria-label="Barra de pesquisa">
+                <button type="submit">Buscar</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre o Jogo</h2>
+            <div class="game-info">
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="https://i.ytimg.com/vi/pBM2xyco_Kg/maxresdefault.jpg" alt="Imagem do Jogo 2">
+                        <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_857b4aaf3c10b2a886d60f029f32b2f86d968311.600x338.jpg?t=1727470248" alt="Imagem do Jogo 3">
+                        <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_c8460408705b54e37228cc320a2da1c19e4dc12f.600x338.jpg?t=1727470248" alt="Imagem do Jogo 4">
+                        <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_ee0be94a0a8e1325050481bcf351d736e6d2982d.600x338.jpg?t=1727470248" alt="Imagem do Jogo 5">
+                    </div>
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+                <div class="price-container">
+                    <p>Preço: R$ 49,90</p>
+                    <button id="comprar">Comprar Agora</button>
+                </div>
+            </div>
+            <p>Bem-vindo ao Meu Jogo Incrível! Uma aventura cheia de desafios e diversão. Junte-se a nós e descubra um mundo novo!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Jogo Incrível. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="jogo.js"></script>
+</body>
+</html>
