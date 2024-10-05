@@ -11,87 +11,34 @@ header {
     padding: 10px 20px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-container input {
-    padding: 10px;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 5px;
-}
-
-.search-container button {
-    padding: 10px 15px;
-    background-color: #fff;
-    border: none;
-    color: #9b59b6;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.search-container button:hover {
-    background-color: #e7e7e7;
-}
-
 main {
     padding: 20px;
 }
 
-section {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Estilo para o container geral da imagem, carrossel e detalhes */
 .game-info {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
+    display: flex;               /* Mantemos o flexbox para alinhamento */
+    align-items: flex-start;     /* Alinha o conteúdo ao topo */
+    margin-bottom: 20px;         /* Espaçamento inferior para o carrossel */
 }
 
-.carousel {
-    flex: 1;
-    margin-right: 20px;
+/* Estilo para a imagem principal */
+.main-image {
+    max-width: 400px;            /* Define a largura máxima da imagem principal */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;          /* Espaçamento entre a imagem e os detalhes */
 }
 
-.price-container {
-    flex: 0 0 auto; /* Ajusta para não ser fixo, mas se adaptar ao conteúdo */
+/* Container dos detalhes (preço e botão) */
+.details-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha ao topo */
 }
 
-.price-container p {
-    margin: 0; /* Remove margem para melhor alinhamento */
+/* Estilo para o preço e botão */
+.price-container {
+    text-align: left;
 }
 
 #comprar {
@@ -109,56 +56,48 @@ section {
     background-color: #8e44ad;
 }
 
-#imagens-adicionais {
-    margin-top: 20px;
-}
-
+/* Estilo para o carrossel */
 .carousel {
-    left: -520px;
-    display: flex;
-    align-items: start;
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
+    position: relative;           /* Necessário para posicionar os botões corretamente */
+    max-width: 400px;            /* Largura máxima do carrossel */
+    height: 200px;               /* Altura fixa para o carrossel */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;             /* Espaçamento superior/inferior para o carrossel */
+}
+
+.carousel-images {
+    display: flex;                /* Coloca as imagens em linha */
+    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
+    width: 300%;                 /* Largura total do carrossel */
 }
 
 .carousel-images img {
-    width: 100%;
-    height: auto;
-    min-height: 400px;
+    width: 100%;                 /* As imagens ocupam 100% do espaço do carrossel */
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
 button.prev, button.next {
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;           /* Para posicionar os botões sobre as imagens */
+    top: 50%;                     /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar corretamente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
     border: none;
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    z-index: 1; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button.prev:hover, button.next:hover {
-    background-color: rgba(255, 255, 255, 1);
-    transform: scale(1.1);
+    z-index: 1;                  /* Garante que os botões fiquem sobre as imagens */
 }
 
 button.prev {
-    left: 15px; 
+    left: 10px;                  /* Alinha o botão "anterior" à esquerda */
 }
 
 button.next {
-    right: 15px; 
+    right: 10px;                 /* Alinha o botão "próximo" à direita */
 }
 
 footer {
@@ -169,4 +108,75 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+header {
+    background: linear-gradient(to right, #8e44ad, #9b59b6); /* Degradê */
+    color: white;
+    padding: 20px; /* Aumentar o padding */
+    text-align: center; /* Centraliza o texto */
+}
+
+h1 {
+    margin: 0; /* Remove margem padrão */
+    font-size: 2.5em; /* Aumenta o tamanho da fonte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+nav {
+    margin-top: 15px; /* Espaçamento entre título e menu */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Mantém os itens do menu na mesma linha */
+    margin: 0 20px; /* Aumenta o espaço entre os itens */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s; /* Transição suave */
+}
+
+nav ul li a:hover {
+    color: #f1c40f; /* Cor ao passar o mouse */
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); /* Sombra ao passar o mouse */
+}
+
+.search-container {
+    margin-top: 10px; /* Espaçamento acima do campo de busca */
+}
+
+.search-container input {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid white; /* Borda branca */
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: border-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.search-container input:focus {
+    border-color: #f1c40f; /* Borda amarela ao focar */
+    outline: none; /* Remove a borda padrão do navegador */
+}
+
+.search-container button {
+    padding: 10px 15px;
+    background-color: #fff; /* Botão branco */
+    border: none;
+    color: #9b59b6; /* Cor do texto do botão */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.search-container button:hover {
+    background-color: #f1c40f; /* Cor ao passar o mouse */
+    color: white; /* Muda a cor do texto ao passar o mouse */
 }

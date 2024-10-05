@@ -16,3 +16,6 @@ nextButton.addEventListener('click', () => {
 function updateCarousel() {
     track.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
+document.getElementById('jogo.html').addEventListener('click', function() {
+    window.location.href = 'jogo.html';
+});

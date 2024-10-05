@@ -23,26 +23,32 @@
     </header>
 
     <main>
-        <section id="sobre">
-            <h2>Sobre o Jogo</h2>
-            <div class="game-info">
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="https://i.ytimg.com/vi/pBM2xyco_Kg/maxresdefault.jpg" alt="Imagem do Jogo 2">
-                        <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_857b4aaf3c10b2a886d60f029f32b2f86d968311.600x338.jpg?t=1727470248" alt="Imagem do Jogo 3">
-                        <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_c8460408705b54e37228cc320a2da1c19e4dc12f.600x338.jpg?t=1727470248" alt="Imagem do Jogo 4">
-                        <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_ee0be94a0a8e1325050481bcf351d736e6d2982d.600x338.jpg?t=1727470248" alt="Imagem do Jogo 5">
-                    </div>
-                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
-                </div>
+        <div class="game-info">
+            <!-- Imagem principal do jogo -->
+            <img class="main-image" src="https://preview.redd.it/yikie8k8y2dd1.jpeg?width=640&crop=smart&auto=webp&s=d25c0619231181fe4186054c54e3ea3df26b3945" alt="Imagem Principal do Jogo">
+        
+            <!-- Container do preço e do botão -->
+            <div class="details-container">
                 <div class="price-container">
                     <p>Preço: R$ 49,90</p>
                     <button id="comprar">Comprar Agora</button>
                 </div>
             </div>
-            <p>Bem-vindo ao Meu Jogo Incrível! Uma aventura cheia de desafios e diversão. Junte-se a nós e descubra um mundo novo!</p>
+        </div>
+        
+        <!-- Container do carrossel -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_857b4aaf3c10b2a886d60f029f32b2f86d968311.600x338.jpg?t=1727470248" alt="Imagem 1">
+                <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_c8460408705b54e37228cc320a2da1c19e4dc12f.600x338.jpg?t=1727470248" alt="Imagem 2">
+                <img src="https://shared.steamstatic.com/store_item_assets/steam/apps/2669320/ss_ee0be94a0a8e1325050481bcf351d736e6d2982d.600x338.jpg?t=1727470248" alt="Imagem 3">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
         </section>
+        
     </main>
 
     <footer>
