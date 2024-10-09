@@ -1,154 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loja de Jogos</title>
     <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header class="header">
-      <div class="header-container">
-        <img src="img/sas.png" alt="Logo da Loja de Jogos" class="logo" />
-        <nav class="nav">
-          <ul>
-            <li><a href="#destaques">Destaques</a></li>
-            <li><a href="#jogos">Jogos</a></li>
-          </ul>
-        </nav>
-        <form class="search-form">
-          <input
-            type="text"
-            placeholder="Pesquisar jogos..."
-            aria-label="Pesquisar jogos"
-          />
-          <button type="submit">Buscar</button>
-        </form>
-      </div>
+        <div class="header-container">
+            <img src="img/sas.png" alt="Logo da Loja de Jogos" class="logo" />
+            <nav class="nav">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/frontend/index.html">Início</a></li>
+                    <li><a href="#destaques">Destaques</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="http://127.0.0.1:5500/frontend/Perfil.html">Perfil</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="text" placeholder="Pesquisar jogos..." aria-label="Pesquisar jogos" />
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
     </header>
 
     <main>
-      <section id="destaques" class="highlight-section">
-        <h2>Destaques da Semana</h2>
-        <div class="highlight-container">
-          <div class="highlight-item">
-            <img
-              src="https://cdn1.epicgames.com/offer/f640a0c1648147fea7e81565b45a3003/EGS_Warhammer40000SpaceMarine2_SaberInteractive_S2_1200x1600-8b8777b3ce0c530a00af7bf8efda793b"
-              alt="Warhammer 40,000: Space Marine"
-              class="highlight-image"
-            />
-            <h3>Warhammer 40,000: Space Marine</h3>
-            <p>Descrição breve do jogo destaque.</p>
-            <button class="buy-button">Comprar Agora</button>
-          </div>
-          <div class="highlight-item">
-            <img
-              src="https://cdn1.epicgames.com/offer/b61e8ddd14e94619b7a74cf9d73f86b5/EGS_EASPORTSFC25StandardEdition_EACanada_S2_1200x1600-6e6b5c1d5d30e15b1dbdde721c6bc544"
-              alt="EA SPORTS FC 25"
-              class="highlight-image"
-            />
-            <h3>EA SPORTS FC 25</h3>
-            <p>Descrição breve do jogo destaque.</p>
-            <button class="buy-button">Comprar Agora</button>
-          </div>
-          <div class="highlight-item">
-            <img
-              src="https://image.api.playstation.com/vulcan/ap/rnd/202305/1515/93797636f47b37b74e9d3740e17ae1306aaf539c7952a703.jpg"
-              alt="Mortal Kombat 1"
-              class="highlight-image"
-            />
-            <h3>Mortal Kombat 1</h3>
-            <p>Descrição breve do jogo destaque.</p>
-            <button class="buy-button">Comprar Agora</button>
-          </div>
-        </div>
-      </section>
+        <section id="destaques" class="highlight-section">
+            <h2>Destaques da Semana</h2>
+            <div class="highlight-container">
+                <div class="highlight-item">
+                    <img src="https://cdn1.epicgames.com/offer/f640a0c1648147fea7e81565b45a3003/EGS_Warhammer40000SpaceMarine2_SaberInteractive_S2_1200x1600-8b8777b3ce0c530a00af7bf8efda793b" alt="Warhammer 40,000: Space Marine" class="highlight-image" />
+                    <h3>Warhammer 40,000: Space Marine</h3>
+                    <p>Descrição breve do jogo destaque.</p>
+                    <button class="buy-button">Comprar Agora</button>
+                </div>
+                <div class="highlight-item">
+                    <img src="https://cdn1.epicgames.com/offer/b61e8ddd14e94619b7a74cf9d73f86b5/EGS_EASPORTSFC25StandardEdition_EACanada_S2_1200x1600-6e6b5c1d5d30e15b1dbdde721c6bc544" alt="EA SPORTS FC 25" class="highlight-image" />
+                    <h3>EA SPORTS FC 25</h3>
+                    <p>Descrição breve do jogo destaque.</p>
+                    <button class="buy-button">Comprar Agora</button>
+                </div>
+                <div class="highlight-item">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202305/1515/93797636f47b37b74e9d3740e17ae1306aaf539c7952a703.jpg" alt="Mortal Kombat 1" class="highlight-image" />
+                    <h3>Mortal Kombat 1</h3>
+                    <p>Descrição breve do jogo destaque.</p>
+                    <button class="buy-button">Comprar Agora</button>
+                </div>
+            </div>
+        </section>
 
-      <section id="jogos" class="games-section">
-        <h2>Todos os Jogos</h2>
-        <div class="games-container">
-          <div class="game-item">
-            <img
-              src="https://i0.wp.com/nosnerds.com.br/wp-content/uploads/2023/12/dragonballsparkingzero-capa.webp?fit=800%2C446&ssl=1"
-              alt="DRAGON BALL: Sparking! ZERO"
-            />
-            <h3>DRAGON BALL: Sparking! ZERO</h3>
-            <p>R$ 99,99</p>
-            <button class="buy-button" src="">Comprar</button>
-          </div>
-          <div class="game-item">
-            <img
-              src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/f40ef565c380c617020e559b4b4b089edd93ec09/capsule_616x353.jpg?t=1725007201"
-              alt="Black Myth: Wukong"
-            />
-            <h3>Black Myth: Wukong</h3>
-            <p>R$ 79,99</p>
-            <button class="buy-button">Comprar</button>
-          </div>
-          <div class="game-item">
-            <img
-              src="https://cdn1.epicgames.com/offer/e860fa919120430ca12c557bb676bc6a/EGST_StoreLandscape_2560x1440_2560x1440-e7beda03979167bed00fb2c73bb7998a"
-              alt="Star Wars Outlaws"
-            />
-            <h3>Star Wars Outlaws</h3>
-            <p>R$ 59,99</p>
-            <button class="buy-button">Comprar</button>
-          </div>
-          <div class="game-item">
-            <img
-              src="https://cdn1.epicgames.com/spt-assets/edaff839f0734d16bc89d2ddb1dc9339/steel-magnolia-15owu.jpg"
-              alt="God of War Ragnarök"
-            />
-            <h3>God of War Ragnarök</h3>
-            <p>R$ 89,99</p>
-            <button class="buy-button">Comprar</button>
-          </div>
-          <div class="game-item">
-            <img
-              src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a"
-              alt="Minecraft"
-            />
-            <h3>Minecraft</h3>
-            <p>R$ 89,99</p>
-            <button class="buy-button">Comprar</button>
-          </div>
-          <div class="game-item">
-            <img
-              src="https://assets.nuuvem.com/image/upload/v1/products/618418052f91a002e3f9cf6b/sharing_images/dl3d5ccidn9wlkemhfjr.jpg"
-              alt="Elden Ring"
-            />
-            <h3>Elden Ring</h3>
-            <p>R$ 249,99</p>
-            <button class="buy-button">Comprar</button>
-          </div>
-          <div class="game-item">
-            <img
-              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsckaUDr0nE7dcLLlD-Ouz6KcoyozZankqNLYGytSQn-anTyV6nNj0G-y1gaAC0_gethRvjBJK0ipqJL-pjqMP8_HeaP6q_Fhi9rbbfFyymoN_jiaYG3n0Rd8t64FBu9DEXZT5FGAh04RFPSiyuwg2LVyI9Ls763wPdzECnxylQSl1jjgaR4a508ls_w/w1200-h630-p-k-no-nu/Resident_Evil_4_leon_ashley.webp"
-              alt="Resident Evil 4"
-            />
-            <h3>Resident Evil 4</h3>
-            <p>R$ 199,99</p>
-            <button class="buy-button">Comprar</button>
-          </div>
-          <div class="game-item">
-            <img
-              src="https://cdn.wccftech.com/wp-content/uploads/2023/08/Cyberpunk-2077-2.0-patch.jpg"
-              alt="Cyberpunk 2077"
-            />
-            <h3>Cyberpunk 2077</h3>
-            <p>R$ 149,99</p>
-            <button class="buy-button">Comprar</button>
-          </div>
-        </div>
-      </section>
+        <section id="jogos" class="games-section">
+            <h2>Todos os Jogos</h2>
+            <div class="games-container">
+                <div class="game-item">
+                    <img src="https://i0.wp.com/nosnerds.com.br/wp-content/uploads/2023/12/dragonballsparkingzero-capa.webp?fit=800%2C446&ssl=1" alt="DRAGON BALL: Sparking! ZERO" />
+                    <h3>DRAGON BALL: Sparking! ZERO</h3>
+                    <p>R$ 99,99</p>
+                    <a href="http://127.0.0.1:5500/frontend/imagens/Jogos.html"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/f40ef565c380c617020e559b4b4b089edd93ec09/capsule_616x353.jpg?t=1725007201" alt="Black Myth: Wukong" />
+                    <h3>Black Myth: Wukong</h3>
+                    <p>R$ 79,99</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="game-item">
+                    <img src="https://cdn1.epicgames.com/offer/e860fa919120430ca12c557bb676bc6a/EGST_StoreLandscape_2560x1440_2560x1440-e7beda03979167bed00fb2c73bb7998a" alt="Star Wars Outlaws" />
+                    <h3>Star Wars Outlaws</h3>
+                    <p>R$ 59,99</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="game-item">
+                    <img src="https://cdn1.epicgames.com/spt-assets/edaff839f0734d16bc89d2ddb1dc9339/steel-magnolia-15owu.jpg" alt="God of War Ragnarök" />
+                    <h3>God of War Ragnarök</h3>
+                    <p>R$ 89,99</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="game-item">
+                    <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a" alt="Minecraft" />
+                    <h3>Minecraft</h3>
+                    <p>R$ 89,99</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="game-item">
+                    <img src="https://assets.nuuvem.com/image/upload/v1/products/618418052f91a002e3f9cf6b/sharing_images/dl3d5ccidn9wlkemhfjr.jpg" alt="Elden Ring" />
+                    <h3>Elden Ring</h3>
+                    <p>R$ 249,99</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="game-item">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsckaUDr0nE7dcLLlD-Ouz6KcoyozZankqNLYGytSQn-anTyV6nNj0G-y1gaAC0_gethRvjBJK0ipqJL-pjqMP8_HeaP6q_Fhi9rbbfFyymoN_jiaYG3n0Rd8t64FBu9DEXZT5FGAh04RFPSiyuwg2LVyI9Ls763wPdzECnxylQSl1jjgaR4a508ls_w/w1200-h630-p-k-no-nu/Resident_Evil_4_leon_ashley.webp" alt="Resident Evil 4" />
+                    <h3>Resident Evil 4</h3>
+                    <p>R$ 199,99</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+                <div class="game-item">
+                    <img src="https://cdn.wccftech.com/wp-content/uploads/2023/08/Cyberpunk-2077-2.0-patch.jpg" alt="Cyberpunk 2077" />
+                    <h3>Cyberpunk 2077</h3>
+                    <p>R$ 149,99</p>
+                    <button class="buy-button">Comprar</button>
+                </div>
+            </div>
+        </section>
 
-      <div class="carousel-container">
-        <div class="css-1r2g1n6">
-          <div class="css-1f1mql8"></div>
-          <div data-testid="CarouselProgress-1" class="css-ay5qsw"></div>
+        <div class="carousel-container">
+            <div class="css-1r2g1n6">
+                <div class="css-1f1mql8"></div>
+                <div data-testid="CarouselProgress-1" class="css-ay5qsw"></div>
+            </div>
         </div>
-      </div>
     </main>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
