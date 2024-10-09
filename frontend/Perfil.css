@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.header {
+  background-color: #343a40;
+  padding: 10px 20px;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #343a40; /* Cor inicial igual ao texto padrão */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #8003c9; /* Cor ao passar o mouse */
+}
+
+
+.search-form {
+  display: flex;
+}
+
+.search-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+
+.search-form button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #8003c9;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #5e02a1; /* Cor de hover mais escura */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.profile,
+.sidebar,
+.games {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.profile {
+  flex: 2;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #343a40;
+}
+
+.sidebar {
+  width: 200px;
+}
+
+h1,
+h2 {
+  color: #343a40;
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #f8f9fa;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+li:hover {
+  background: #e2e6ea;
+}
+
+.friend-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.profile:hover,
+.sidebar:hover,
+.games:hover {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #343a40;
+}

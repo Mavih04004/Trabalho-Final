@@ -1,0 +1,159 @@
+/* Estilos gerais */
+* {
+  box-sizing: border-box; /* Adiciona o box-sizing para todos os elementos */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Cor de fundo leve */
+  color: #333; /* Cor do texto principal */
+}
+
+/* Cabeçalho */
+.header {
+  background: linear-gradient(to right, #8e44ad, #9b59b6); /* Degradê */
+  color: #ffffff; /* Cor do texto do cabeçalho */
+  padding: 20px; /* Aumenta o padding */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Limita a largura máxima do cabeçalho */
+  margin: auto; /* Centraliza o cabeçalho */
+}
+
+.logo {
+  max-height: 70px; /* Limita a altura do logo */
+}
+
+/* Navegação */
+.nav {
+  margin-top: 15px; /* Espaçamento entre título e menu */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Exibe os itens do menu em linha */
+}
+
+nav ul li {
+  margin: 0 20px; /* Aumenta o espaço entre os itens */
+}
+
+nav ul li a {
+  color: white; /* Cor dos links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s; /* Transição suave */
+}
+
+nav ul li a:hover {
+  color: #f1c40f; /* Cor ao passar o mouse */
+  text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); /* Sombra ao passar o mouse */
+}
+
+/* Formulário de busca */
+.search-form {
+  display: flex;
+  align-items: center; /* Alinha verticalmente o campo de busca */
+}
+
+.search-form input {
+  padding: 10px;
+  width: 200px;
+  border: 2px solid white; /* Borda branca */
+  border-radius: 5px;
+  margin-right: 5px;
+  transition: border-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.search-form input:focus {
+  border-color: #f1c40f; /* Borda amarela ao focar */
+  outline: none; /* Remove a borda padrão do navegador */
+}
+
+.search-form button {
+  padding: 10px 15px;
+  background-color: #ffffff; /* Botão branco */
+  border: none;
+  color: #8e44ad; /* Cor do texto do botão */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+.search-form button:hover {
+  background-color: #e9c960; /* Cor ao passar o mouse */
+  color: white; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Seções de Destaques e Jogos */
+.highlight-section,
+.games-section {
+  padding: 20px;
+  background-color: #ffffff; /* Cor de fundo das seções */
+  margin: 20px; /* Espaçamento externo */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Limita a largura máxima da seção */
+  margin-left: auto; /* Centraliza a seção */
+  margin-right: auto; /* Centraliza a seção */
+}
+
+.highlight-container,
+.games-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
+  justify-content: space-around; /* Espaçamento uniforme entre os itens */
+}
+
+.highlight-item,
+.game-item {
+  margin: 10px;
+  text-align: center;
+  flex: 1 0 30%; /* Ajusta a largura dos itens */
+  max-width: 250px; /* Limita a largura máxima */
+}
+
+.highlight-image,
+.game-item img {
+  width: 100%;
+  border-radius: 8px; /* Borda arredondada nas imagens */
+}
+
+.highlight-description {
+  margin: 10px 0; /* Espaço entre a descrição e o botão */
+}
+
+/* Botões de compra */
+.buy-button {
+  background-color: #8e44ad; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+.buy-button:hover {
+  background-color: #9b59b6; /* Cor ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  text-align: center; /* Centraliza o texto do rodapé */
+  padding: 10px;
+  background-color: #8e44ad; /* Cor de fundo do rodapé */
+  color: white; /* Cor do texto do rodapé */
+  position: relative;
+  bottom: 0;
+  width: 100%; /* Largura total do rodapé */
+}
