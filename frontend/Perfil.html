@@ -1,111 +1,107 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
-    <head>
-        <meta charsert = "UTF-8">
-        <meta name = "viewport" content = "width=device-width,intial-scale=1.0">
-        <title>Perfil</title>
-        
-        <style>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="Perfil.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <img src="img/sas.png" alt="Logo da Loja de Jogos" class="logo" />
+        <nav class="nav">
+          <ul>
+            <li><a href="#destaques" class="active">Destaques</a></li>
+            <li><a href="#jogos">Jogos</a></li>
+          </ul>
+        </nav>
+        <form class="search-form" onsubmit="return false;">
+          <input
+            type="text"
+            placeholder="Pesquisar jogos..."
+            aria-label="Pesquisar jogos"
+          />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </header>
 
-         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url(https://static.vecteezy.com/ti/vetor-gratis/p3/9514800-fundo-branco-e-roxo-pode-ser-usado-para-banner-vetor.jpg);
-}
+    <main class="container">
+      <section class="profile">
+        <img
+          src="https://i.pinimg.com/originals/82/a6/ef/82a6efeaffd8c86ffc5604e524ad7288.jpg"
+          alt="Foto de Perfil"
+          class="profile-pic"
+        />
+        <h1>Nome do Usuário</h1>
+        <p>Descrição do perfil ou biografia do usuário.</p>
+      </section>
 
-.profile-container {
-    max-width: 200px;
-    margin: 50px 0 0 50px; /* Margin top of 50px and margin left of 50px */
-    background: rgb(143, 17, 143);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px hsl(0, 0%, 100%);
-}
+      <aside class="sidebar">
+        <h2>Lista de Amigos</h2>
+        <ul>
+          <li>
+            Amigo 1
+            <img
+              src="https://i.pinimg.com/originals/82/a6/ef/82a6efeaffd8c86ffc5604e524ad7288.jpg"
+              class="friend-pic"
+              alt="Amigo 1"
+            />
+          </li>
+          <li>
+            Amigo 2
+            <img
+              src="https://i.pinimg.com/originals/82/a6/ef/82a6efeaffd8c86ffc5604e524ad7288.jpg"
+              class="friend-pic"
+              alt="Amigo 2"
+            />
+          </li>
+          <li>
+            Amigo 3
+            <img
+              src="https://i.pinimg.com/originals/82/a6/ef/82a6efeaffd8c86ffc5604e524ad7288.jpg"
+              class="friend-pic"
+              alt="Amigo 3"
+            />
+          </li>
+          <li>
+            Amigo 4
+            <img
+              src="https://i.pinimg.com/originals/82/a6/ef/82a6efeaffd8c86ffc5604e524ad7288.jpg"
+              class="friend-pic"
+              alt="Amigo 4"
+            />
+          </li>
+        </ul>
+      </aside>
+    </main>
 
-.profile-container h1 {
-    color: #ffff;
-}  
-.profile-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
+    <section class="games">
+      <h2>Meus Jogos</h2>
+      <ul>
+        <li>
+          <img src="https://cdn.wccftech.com/wp-content/uploads/2023/08/Cyberpunk-2077-2.0-patch.jpg" alt="Cyberpunk 2077" width="50" />
+          Cyberpunk 2077
+        </li>
+        <li>
+          <img src="https://image.api.playstation.com/vulcan/ap/rnd/202305/1515/93797636f47b37b74e9d3740e17ae1306aaf539c7952a703.jpg" alt="Mortal Kombat 1" width="50" />
+          Mortal Kombat 1
+        </li>
+        <li>
+          <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a" alt="Minecraft" width="50" />
+          Minecraft
+        </li>
+        <li>
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsckaUDr0nE7dcLLlD-Ouz6KcoyozZankqNLYGytSQn-anTyV6nNj0G-y1gaAC0_gethRvjBJK0ipqJL-pjqMP8_HeaP6q_Fhi9rbbfFyymoN_jiaYG3n0Rd8t64FBu9DEXZT5FGAh04RFPSiyuwg2LVyI9Ls763wPdzECnxylQSl1jjgaR4a508ls_w/w1200-h630-p-k-no-nu/Resident_Evil_4_leon_ashley.webp" alt="Elden Ring" width="50" />
+          Elden Ring
+        </li>
+      </ul>
+    </section>
 
-.profile-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.profile-header h1 {
-    margin: 10px 0;
-}
-
-.profile-header p {
-    color: #ffffff;
-}
-
-.profile-details {
-    width: 45%;
-}
-
-.profile-details h2 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-    color: #ffffff;
-}
-
-.profile-details p {
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.social-links {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #007bff;
-    font-size: 1.2em;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    min-height: 30vh;
-    background-size: cover;
-    background-position: right;
-}
-
-            
-        </style>
-    </head>
-    <body>
-        <div class = "profile-container">
-            <div class = "profile-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/4675/4675159.png" alt= "Foto de perfil">
-                <h1>Nome</h1>
-                <p>Apelido</p>
-            </div>
-        </div>
-        <div class = "profile-details">
-            <div class="left">
-                <h2>Informações Pessoais</h2>
-                <p><strong>Email:</strong>usuario@email.com</p>
-                <p><strong>Telefone:</strong>(00)00000-0000</p>
-                <p><strong>Endereço:</strong>Rua,123,Cidade,Estado</p>
-            </div>
-        </div>
-        <div class = "center">
-            <h2>Sobre Mim</h2>
-            <p>Descrição:</p>
-        </div>
-        <div class = "social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Linkedin</a>
-            <a href="#">Instagram</a>
-            
-        </div>
-    </body>
+    <footer class="footer">
+      <p>&copy; 2024 Loja de Jogos. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
+ 
