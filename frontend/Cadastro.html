@@ -9,15 +9,15 @@
 <body>
     
     <div class="wrapper">
-        <form action="">
+        <div class="form">
             <h1>Cadastro</h1>
             <div class="input-box">
-                <input type="text" placeholder="Email" required>
+                <input type="text" id="email" placeholder="Usuario/Email" required>
                 <box-icon type='solid' name='user' color="white"></box-icon> 
             </div>
 
             <div class="input-box">
-                <input type="password" placeholder="senha" required> 
+                <input type="password" id="senha" placeholder="senha" required> 
                 <box-icon name='lock-alt' type='solid' color="white"></box-icon>
             </div>
 
@@ -30,8 +30,45 @@
             <div class="register-link">
                 <p>Ja Tem Conta?<br> <a href="Login.html">Login</a></p>
             </div>
-        </form>
+        </div>
     </div>
+
+    <script>
+        function cadastrarPessoa() {
+            // Captura os valores dos inputs
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Cria o objeto com os dados
+            const pessoa = {
+                email: email,
+                senha: parseInt(senha, 10) // Converte a senha para número
+            };
+
+            // Faz a solicitação POST para o backend
+            fetch('http://localhost:3000/api/usuario/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(pessoa)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Erro ao cadastrar a pessoa');
+                })
+                .then(data => {
+                    console.log('Pessoa cadastrada com sucesso:', data);
+                    window.location.href = ""
+                    // Limpar os campos de entrada após o envio
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                });
+        }
+    </script>
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
