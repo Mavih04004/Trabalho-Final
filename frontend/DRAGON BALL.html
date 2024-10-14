@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venda de Jogo Online</title>
-    <link rel="stylesheet" href="jogo.css">
+    <link rel="stylesheet" href="DRAGON BALL.css">
 </head>
 <body>
     <header>
         <h1>Meu Jogo Incrível</h1>
         <nav>
             <ul>
-                <li><a href="http://127.0.0.1:5500/frontend/index.html">Inicio</a></li>
-                <li><a href="#sobre">Destaques</a></li>
+                <li><a href="http://127.0.0.1:5500/frontend/index.html">Início</a></li>
+                <li><a href="http://127.0.0.1:5500/frontend/index.html#promoca">Promoção</a></li>
                 <li><a href="#preco">Jogos</a></li>
                 <li><a href="http://127.0.0.1:5500/frontend/DRAGON%20BALL.html">Perfil</a></li>
             </ul>
@@ -25,7 +25,7 @@
 
     <main>
         <div class="game-info">
-            <img class="main-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiaNrz-I8eIZbVfgFjo3wLoUFlT9tIH8Pbdg&s" alt="Imagem Principal do Jogo">
+            <img id="main-image" class="main-image" src="img/dbsz.jpg" alt="Imagem Principal do Jogo">
             <div class="details-container">
                 <div class="price-container">
                     <p>Preço: R$ 49,90</p>
@@ -33,6 +33,25 @@
                 </div>
             </div>
         </div>
+
+        <!-- Carrossel de imagens -->
+        <div class="carousel">
+            <button class="prev">❮</button>
+
+            <img class="carousel-image" src="img/DRA1.jpg" alt="Imagem 1" style="display:none;">
+            <img class="carousel-image" src="img/DRA2.jpg" alt="Imagem 2" style="display:none;">
+            <img class="carousel-image" src="img/DRA3.jpg" alt="Imagem 3" style="display:none;">
+            <img class="carousel-image" src="img/DRA4.jpg" alt="Imagem 4" style="display:none;">
+            <img class="carousel-image" src="img/DRA5.jpg" alt="Imagem 5" style="display:none;">
+            <img class="carousel-image" src="img/DRA6.jpg" alt="Imagem 6" style="display:none;">
+            <button class="next">❯</button>
+        </div>
     </main>
+
+    <footer>
+        <p>&copy; 2024 - Venda de Jogo Online</p>
+    </footer>
+
+    <script src="Dragonboll.js"></script>
 </body>
 </html>

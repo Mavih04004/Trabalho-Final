@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
@@ -13,104 +12,222 @@
             <nav class="nav">
                 <ul>
                     <li><a href="http://127.0.0.1:5500/frontend/index.html">Início</a></li>
-                    <li><a href="#destaques">Destaques</a></li>
+                    <li><a href="#promoca">Promoção</a></li>
                     <li><a href="#jogos">Jogos</a></li>
                     <li><a href="http://127.0.0.1:5500/frontend/Perfil.html">Perfil</a></li>
                 </ul>
             </nav>
             <form class="search-form">
-                <input type="text" placeholder="Pesquisar jogos..." aria-label="Pesquisar jogos" />
+                <input type="text" id="search-input" placeholder="Pesquisar jogos..." aria-label="Pesquisar jogos" />
                 <button type="submit">Buscar</button>
             </form>
+            
         </div>
     </header>
 
     <main>
-        <section id="destaques" class="highlight-section">
-            <h2>Destaques da Semana</h2>
+        <section id="promocao" class="highlight-section">
+            <h2>Promoção da Semana</h2>
             <div class="highlight-container">
                 <div class="highlight-item">
-                    <img src="https://cdn1.epicgames.com/offer/f640a0c1648147fea7e81565b45a3003/EGS_Warhammer40000SpaceMarine2_SaberInteractive_S2_1200x1600-8b8777b3ce0c530a00af7bf8efda793b" alt="Warhammer 40,000: Space Marine" class="highlight-image" />
+                    <img src="img/EGS_Warhammer40000.jpeg" alt="Warhammer 40,000: Space Marine" class="highlight-image" />
                     <h3>Warhammer 40,000: Space Marine</h3>
+                    <p class="original-price">R$ 149,99</p>
+                    <p class="promo-price">R$ 99,99</p>
                     <p>Descrição breve do jogo destaque.</p>
                     <button class="buy-button">Comprar Agora</button>
                 </div>
                 <div class="highlight-item">
-                    <img src="https://cdn1.epicgames.com/offer/b61e8ddd14e94619b7a74cf9d73f86b5/EGS_EASPORTSFC25StandardEdition_EACanada_S2_1200x1600-6e6b5c1d5d30e15b1dbdde721c6bc544" alt="EA SPORTS FC 25" class="highlight-image" />
+                    <img src="img/EGS_EASPORTSFC.jpeg" alt="EA SPORTS FC 25" class="highlight-image" />
                     <h3>EA SPORTS FC 25</h3>
+                    <p class="original-price">R$ 299,99</p>
+                    <p class="promo-price">R$ 199,99</p>
                     <p>Descrição breve do jogo destaque.</p>
                     <button class="buy-button">Comprar Agora</button>
                 </div>
                 <div class="highlight-item">
-                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202305/1515/93797636f47b37b74e9d3740e17ae1306aaf539c7952a703.jpg" alt="Mortal Kombat 1" class="highlight-image" />
+                    <img src="img/MortalKombat1.jpeg" alt="Mortal Kombat 1" class="highlight-image" />
                     <h3>Mortal Kombat 1</h3>
+                    <p class="original-price">R$ 249,99</p>
+                    <p class="promo-price">R$ 159,99</p>
                     <p>Descrição breve do jogo destaque.</p>
                     <button class="buy-button">Comprar Agora</button>
                 </div>
             </div>
         </section>
+        
 
         <section id="jogos" class="games-section">
             <h2>Todos os Jogos</h2>
+            <label for="category">Selecionar Categoria:</label>
+            <select id="category" class="category-select">
+                <option value="todos">Todos</option>
+                <option value="acao">Ação</option>
+                <option value="aventura">Aventura</option>
+                <option value="rpg">RPG</option>
+                <option value="esporte">Esporte</option>
+                <option value="simulacao">Simulação</option>
+                <option value="luta">Luta</option>
+            </select>
+        
             <div class="games-container">
-                <div class="game-item">
-                    <img src="https://i0.wp.com/nosnerds.com.br/wp-content/uploads/2023/12/dragonballsparkingzero-capa.webp?fit=800%2C446&ssl=1" alt="DRAGON BALL: Sparking! ZERO" />
+                <div class="game-item" data-category="acao,aventura,luta">
+                    <img src="img/dbsz.jpg" alt="DRAGON BALL: Sparking! ZERO" />
                     <h3>DRAGON BALL: Sparking! ZERO</h3>
                     <p>R$ 99,99</p>
                     <a href="http://127.0.0.1:5500/frontend/DRAGON%20BALL.html"><button class="buy-button">Comprar</button></a>
                 </div>
-                <div class="game-item">
-                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/f40ef565c380c617020e559b4b4b089edd93ec09/capsule_616x353.jpg?t=1725007201" alt="Black Myth: Wukong" />
+                <div class="game-item" data-category="acao,rpg,aventura">
+                    <img src="img/macaco.jpg" alt="Black Myth: Wukong" />
                     <h3>Black Myth: Wukong</h3>
                     <p>R$ 79,99</p>
-                    <button class="buy-button">Comprar</button>
+                    <a href="http://127.0.0.1:5500/frontend/BlackMythWukong.html"><button class="buy-button">Comprar</button></a>
                 </div>
-                <div class="game-item">
-                    <img src="https://cdn1.epicgames.com/offer/e860fa919120430ca12c557bb676bc6a/EGST_StoreLandscape_2560x1440_2560x1440-e7beda03979167bed00fb2c73bb7998a" alt="Star Wars Outlaws" />
+                <div class="game-item" data-category="acao,rpg,aventura">
+                    <img src="img/star.jpeg" alt="Star Wars Outlaws" />
                     <h3>Star Wars Outlaws</h3>
                     <p>R$ 59,99</p>
-                    <button class="buy-button">Comprar</button>
+                    <a href="http://127.0.0.1:5500/frontend/BlackMythWukong.html"><button class="buy-button">Comprar</button></a>
                 </div>
-                <div class="game-item">
-                    <img src="https://cdn1.epicgames.com/spt-assets/edaff839f0734d16bc89d2ddb1dc9339/steel-magnolia-15owu.jpg" alt="God of War Ragnarök" />
+                <div class="game-item" data-category="acao,aventura,luta">
+                    <img src="img/god.jpg" alt="God of War Ragnarök" />
                     <h3>God of War Ragnarök</h3>
                     <p>R$ 89,99</p>
-                    <button class="buy-button">Comprar</button>
+                    <a href=""><button class="buy-button">Comprar</button></a>
                 </div>
-                <div class="game-item">
-                    <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000000964/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a" alt="Minecraft" />
+                <div class="game-item" data-category="simulacao,aventura">
+                    <img src="img/mm.jpg" alt="Minecraft" />
                     <h3>Minecraft</h3>
                     <p>R$ 89,99</p>
-                    <button class="buy-button">Comprar</button>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
                 </div>
-                <div class="game-item">
-                    <img src="https://assets.nuuvem.com/image/upload/v1/products/618418052f91a002e3f9cf6b/sharing_images/dl3d5ccidn9wlkemhfjr.jpg" alt="Elden Ring" />
+                <div class="game-item" data-category="rpg,aventura,luta">
+                    <img src="img/elden.jpg" alt="Elden Ring" />
                     <h3>Elden Ring</h3>
                     <p>R$ 249,99</p>
-                    <button class="buy-button">Comprar</button>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
                 </div>
-                <div class="game-item">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsckaUDr0nE7dcLLlD-Ouz6KcoyozZankqNLYGytSQn-anTyV6nNj0G-y1gaAC0_gethRvjBJK0ipqJL-pjqMP8_HeaP6q_Fhi9rbbfFyymoN_jiaYG3n0Rd8t64FBu9DEXZT5FGAh04RFPSiyuwg2LVyI9Ls763wPdzECnxylQSl1jjgaR4a508ls_w/w1200-h630-p-k-no-nu/Resident_Evil_4_leon_ashley.webp" alt="Resident Evil 4" />
+                <div class="game-item" data-category="acao,aventura,luta">
+                    <img src="img/RD4.jpg" alt="Resident Evil 4" />
                     <h3>Resident Evil 4</h3>
                     <p>R$ 199,99</p>
-                    <button class="buy-button">Comprar</button>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
                 </div>
-                <div class="game-item">
-                    <img src="https://cdn.wccftech.com/wp-content/uploads/2023/08/Cyberpunk-2077-2.0-patch.jpg" alt="Cyberpunk 2077" />
+                <div class="game-item" data-category="acao,aventura,rpg">
+                    <img src="img/Cyberpunk.jpg" alt="Cyberpunk 2077" />
                     <h3>Cyberpunk 2077</h3>
                     <p>R$ 149,99</p>
-                    <button class="buy-button">Comprar</button>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="acao,rpg">
+                    <img src="img/DETROIT.jpg" alt="Detroit: Become Human" />
+                    <h3>Detroit: Become Human</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="simulacao,rpg,aventura">
+                    <img src="img/STARDEW.jpg" alt="Stardew Valley" />
+                    <h3>Stardew Valley</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="luta,simulacao">
+                    <img src="img/TEAM.jpg" alt="Team Fortress 2" />
+                    <h3>Team Fortress 2</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="luta,aventura,acao">
+                    <img src="img/asv.jpg" alt="Assassin's Creed Valhalla" />
+                    <h3>Assassin's Creed Valhalla</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="esporte,simulacao">
+                    <img src="img/F1.jpeg" alt="F1® 24" />
+                    <h3>F1® 24</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="esporte,simulacao">
+                    <img src="img/Forza.png" alt="Forza Horizon 4" />
+                    <h3>Forza Horizon 4</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="simulacao,acao,esporte">
+                    <img src="img/mania.jpeg" alt="Trackmania" />
+                    <h3>Trackmania</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="simulacao,esporte,acao,aventura">
+                    <img src="img/repa.jpg" alt="Riders Republic" />
+                    <h3>Riders Republic</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="acao,rpg,aventura">
+                    <img src="img/falou.jpg" alt="Fallout 76" />
+                    <h3>Fallout 76</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="acao,aventura">
+                    <img src="img/dbd.jpeg" alt="Dead by Daylight" />
+                    <h3>Dead by Daylight</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="acao,aventura,simulacao">
+                    <img src="img/porta.jpg" alt="Backrooms: Escape Together" />
+                    <h3>Backrooms: Escape Together</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="acao,simulacao,aventura">
+                    <img src="img/dayz.jpeg" alt="DayZ" />
+                    <h3>DayZ</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="simulacao,acao,aventura">
+                    <img src="img/forest.jpg" alt="The Forest" />
+                    <h3>The Forest</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="simulacao,acao,aventura,luta">
+                    <img src="img/pal.jpg" alt="Palworld" />
+                    <h3>Palworld</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
+                </div>
+                <div class="game-item" data-category="acao,aventura">
+                    <img src="img/TLFU1.jpeg" alt="The Last of Us Part I" />
+                    <h3>The Last of Us Part I</h3>
+                    <p>R$ 149,99</p>
+                    <a href="a"><button class="buy-button">Comprar</button></a>
                 </div>
             </div>
         </section>
-
-        <div class="carousel-container">
-            <div class="css-1r2g1n6">
-                <div class="css-1f1mql8"></div>
-                <div data-testid="CarouselProgress-1" class="css-ay5qsw"></div>
-            </div>
-        </div>
     </main>
-    <script src="script.js"></script>
+    <script> 
+        const categorySelect = document.getElementById('category');
+        const games = document.querySelectorAll('.game-item');
+
+        categorySelect.addEventListener('change', () => {
+            const selectedCategory = categorySelect.value;
+
+            games.forEach(game => {
+                const gameCategories = game.getAttribute('data-category').split(',');
+                if (selectedCategory === 'todos' || gameCategories.includes(selectedCategory)) {
+                    game.style.display = 'block';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        });</script>
+    <script src="index.js"></script>
 </body>
 </html>

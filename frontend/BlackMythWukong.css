@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .header {
+    background: linear-gradient(to right, #8e44ad, #9b59b6); /* Degradê */
+    color: #ffffff; /* Cor do texto do cabeçalho */
+    padding: 10px; /* Reduzido o padding */
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav {
+    margin-top: 15px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #f1c40f;
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+  }
+  
+  .search-container {
+    margin-top: 10px;
+  }
+  
+  .search-container input {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-right: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .search-container input:focus {
+    border-color: #f1c40f;
+    outline: none;
+  }
+  
+  .search-container button {
+    padding: 10px 15px;
+    background-color: #fff;
+    border: none;
+    color: #9b59b6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-container button:hover {
+    background-color: #f1c40f;
+    color: white;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* Estilo para o container geral da imagem, carrossel e detalhes */
+  .game-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para a imagem principal */
+  .main-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  /* Container dos detalhes (preço e botão) */
+  .details-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Estilo para o preço e botão */
+  .price-container {
+    text-align: left;
+  }
+  
+  #comprar {
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  #comprar:hover {
+    background-color: #8e44ad;
+  }
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+  

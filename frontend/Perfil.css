@@ -49,11 +49,12 @@ body {
 .search-form {
   display: flex;
   align-items: center; /* Alinha verticalmente o campo de busca */
+  margin-left: 20px; /* Adiciona espaço à esquerda da barra de pesquisa */
 }
 
 .search-form input {
   padding: 10px;
-  width: 200px;
+  width: 250px; /* Aumenta a largura do campo de busca */
   border: 2px solid white; /* Borda branca */
   border-radius: 5px;
   margin-right: 5px;
@@ -61,22 +62,22 @@ body {
 }
 
 .search-form input:focus {
-  border-color: #f1c40f; /* Borda amarela ao focar */
+  border-color: #ffffff; /* Borda amarela ao focar */
   outline: none; /* Remove a borda padrão do navegador */
 }
 
-.search-form button {
+.search-button {
   padding: 10px 15px;
-  background: none; /* Sem fundo no botão */
-  color: #ffffff; /* Cor do texto do botão em branco */
+  background-color: #ffffff; /* Cor de fundo do botão */
+  color: #343a40; /* Cor do texto do botão */
   border: none;
+  border-radius: 5px; /* Borda arredondada */
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 
-.search-form button:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Cor de hover do botão */
-  color: #ffffff; /* Muda a cor do texto ao passar o mouse */
+.search-button:hover {
+  background-color: #e0b800; /* Cor de hover do botão */
 }
 
 .container {
@@ -98,7 +99,6 @@ body {
   margin: 3px auto; /* Reduziu a margem para 5px nas laterais */
   text-align: center;
 }
-
 
 .profile {
   flex: 2;
@@ -135,35 +135,39 @@ li {
   border-radius: 5px;
   display: flex;
   align-items: center;
- justify-content: space-between;
+  justify-content: space-between;
 }
-
-
-.friend-pic {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-left: 10px;
-}
-
 .friend-list {
-  max-height: 300px; /* Altura fixa para a lista de amigos */
-  overflow-y: auto; /* Habilita o scroll vertical */
-  padding-right: 10px; /* Espaço para evitar sobreposição com a barra de rolagem */
+  list-style-type: none; /* Remove os marcadores padrão */
+  padding: 0; /* Remove o padding */
+  margin: 10px 0; /* Margem acima e abaixo da lista */
+  display: flex; /* Exibe os itens em linha */
+  flex-direction: column; /* Alinha os itens em coluna */
+  gap: 10px; /* Espaçamento entre os itens */
 }
 
 .friend-list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
+  background: #f8f9fa; /* Cor de fundo clara para os itens da lista */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  display: flex; /* Flexbox para alinhamento */
+  align-items: center; /* Alinha verticalmente */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
 }
 
-.friend-list img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+.friend-list li:hover {
+  transform: translateY(-2px); /* Elevação ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
+
+.friend-pic {
+  width: 40px; /* Aumenta a largura da imagem */
+  height: 40px; /* Aumenta a altura da imagem */
+  border-radius: 50%; /* Faz as imagens ficarem circulares */
+  margin-right: 10px; /* Espaço entre a imagem e o nome do amigo */
+}
+
 
 .profile:hover,
 .sidebar:hover,
@@ -237,13 +241,40 @@ li {
   text-align: center;
 }
 
-/* Rodapé */
+
 footer {
-  text-align: center; /* Centraliza o texto do rodapé */
+  text-align: center;
   padding: 10px;
-  background-color: #8e44ad; /* Cor de fundo do rodapé */
-  color: white; /* Cor do texto do rodapé */
+  background-color: #8e44ad; 
+  color: white;
   position: relative;
   bottom: 0;
-  width: 100%; /* Largura total do rodapé */
+  width: 100%;
+}
+.achievements-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.achievement-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px; 
+  margin: 10px 0;
+  display: flex; 
+  align-items: center; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  transition: background 0.3s, transform 0.3s; 
+}
+
+.achievement-item i {
+  margin-right: 10px;
+  color: #343a40;
+  font-size: 1.5em; 
+}
+
+.achievement-item:hover {
+  background: #e0f7fa;
+  transform: translateY(-2px); 
 }

@@ -1,6 +1,6 @@
-/* Estilos gerais */
+
 * {
-  box-sizing: border-box; /* Adiciona o box-sizing para todos os elementos */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -9,151 +9,187 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Cor de fundo leve */
-  color: #000000; /* Cor do texto principal */
+  background-color: #f5f5f5; 
+  color: #000000; 
 }
 
 /* Cabeçalho */
 .header {
-  background: linear-gradient(to right, #8e44ad, #9b59b6); /* Degradê */
-  color: #ffffff; /* Cor do texto do cabeçalho */
-  padding: 20px; /* Aumenta o padding */
+  background: linear-gradient(to right, #8e44ad, #9b59b6);
+  color: #ffffff;
+  padding: 20px;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* Limita a largura máxima do cabeçalho */
-  margin: auto; /* Centraliza o cabeçalho */
+  max-width: 1200px; 
+  margin: auto;
 }
 
 .logo {
-  max-height: 70px; /* Limita a altura do logo */
+  max-height: 70px;
 }
 
-/* Navegação */
+
 .nav {
-  margin-top: 15px; /* Espaçamento entre título e menu */
+  margin-top: 15px;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
-  display: flex; /* Exibe os itens do menu em linha */
+  display: flex;
 }
 
 nav ul li {
-  margin: 0 20px; /* Aumenta o espaço entre os itens */
+  margin: 0 20px;
 }
 
 nav ul li a {
-  color: white; /* Cor dos links */
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s, text-shadow 0.3s; /* Transição suave */
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
-  color: #f1c40f; /* Cor ao passar o mouse */
-  text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); /* Sombra ao passar o mouse */
+  color: #f1c40f;
+  text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
 }
 
-/* Formulário de busca */
+
 .search-form {
   display: flex;
-  align-items: center; /* Alinha verticalmente o campo de busca */
+  align-items: center;
 }
 
 .search-form input {
   padding: 10px;
   width: 200px;
-  border: 2px solid white; /* Borda branca */
+  border: 2px solid white;
   border-radius: 5px;
   margin-right: 5px;
-  transition: border-color 0.3s; /* Transição suave ao passar o mouse */
+  transition: border-color 0.3s;
 }
 
 .search-form input:focus {
-  border-color: #f1c40f; /* Borda amarela ao focar */
-  outline: none; /* Remove a borda padrão do navegador */
+  border-color: #f1c40f;
+  outline: none;
 }
 
 .search-form button {
   padding: 10px 15px;
-  background-color: #ffffff; /* Botão branco */
+  background-color: #ffffff;
   border: none;
-  color: #8e44ad; /* Cor do texto do botão */
+  color: #8e44ad;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Transição suave */
+  transition: background-color 0.3s;
 }
 
 .search-form button:hover {
-  background-color: #e9c960; /* Cor ao passar o mouse */
-  color: white; /* Muda a cor do texto ao passar o mouse */
+  background-color: #e9c960;
+  color: white;
 }
 
-/* Seções de Destaques e Jogos */
+
 .highlight-section,
 .games-section {
   padding: 20px;
-  background-color: #ffffff; /* Cor de fundo das seções */
-  margin: 20px; /* Espaçamento externo */
+  background-color: #ffffff;
+  margin: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 1200px; /* Limita a largura máxima da seção */
-  margin-left: auto; /* Centraliza a seção */
-  margin-right: auto; /* Centraliza a seção */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .highlight-container,
 .games-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
-  justify-content: space-around; /* Espaçamento uniforme entre os itens */
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .highlight-item,
 .game-item {
   margin: 10px;
   text-align: center;
-  flex: 1 0 30%; /* Ajusta a largura dos itens */
-  max-width: 250px; /* Limita a largura máxima */
+  flex: 1 0 30%;
+  max-width: 250px;
 }
 
 .highlight-image,
 .game-item img {
   width: 100%;
-  border-radius: 8px; /* Borda arredondada nas imagens */
+  border-radius: 8px;
 }
 
 .highlight-description {
-  margin: 10px 0; /* Espaço entre a descrição e o botão */
+  margin: 10px 0;
 }
 
-/* Botões de compra */
 .buy-button {
-  background-color: #8e44ad; /* Cor de fundo do botão */
-  color: white; /* Cor do texto do botão */
+  background-color: #8e44ad;
+  color: white;
   border: none;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Transição suave */
+  transition: background-color 0.3s;
 }
 
 .buy-button:hover {
-  background-color: #9b59b6; /* Cor ao passar o mouse */
+  background-color: #9b59b6;
 }
 
-/* Rodapé */
+
 footer {
-  text-align: center; /* Centraliza o texto do rodapé */
+  text-align: center;
   padding: 10px;
-  background-color: #8e44ad; /* Cor de fundo do rodapé */
-  color: white; /* Cor do texto do rodapé */
+  background-color: #8e44ad;
+  color: white;
   position: relative;
   bottom: 0;
-  width: 100%; /* Largura total do rodapé */
+  width: 100%;
 }
+.category-container {
+  margin: 20px 0;
+}
+
+.category-container label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.category-container select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #8e44ad;
+  transition: border-color 0.3s;
+}
+
+.category-container select:hover {
+  border-color: #f1c40f;
+}
+.category-select {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.original-price {
+  text-decoration: line-through;
+  color: red;
+}
+
+.promo-price {
+  color: green;
+  font-weight: bold;
+}
+
+
