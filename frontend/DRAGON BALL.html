@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="DRAGON BALL.css">
 </head>
 <body>
-    <header>
-        <h1>Meu Jogo Incrível</h1>
-        <nav>
-            <ul>
-                <li><a href="http://127.0.0.1:5500/frontend/index.html">Início</a></li>
-                <li><a href="http://127.0.0.1:5500/frontend/index.html#promoca">Promoção</a></li>
-                <li><a href="#preco">Jogos</a></li>
-                <li><a href="http://127.0.0.1:5500/frontend/DRAGON%20BALL.html">Perfil</a></li>
-            </ul>
-            <div class="search-container">
-                <input type="text" placeholder="Pesquisar jogos..." aria-label="Barra de pesquisa">
+    <header class="header">
+        <div class="header-container">
+            <img src="img/sas.png" alt="Logo da Loja de Jogos" class="logo">
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#promoca">Promoção</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                </ul>
+            </nav>
+            <form class="search-form">
+                <input type="text" id="search-input" placeholder="Pesquisar jogos..." aria-label="Pesquisar jogos">
                 <button type="submit">Buscar</button>
-            </div>
-        </nav>
+            </form>
+        </div>
     </header>
 
     <main>
@@ -29,28 +31,35 @@
             <div class="details-container">
                 <div class="price-container">
                     <p>Preço: R$ 49,90</p>
-                    <button id="comprar">Comprar Agora</button>
+                    <a href="cdb.html">
+                        <button class="buy-button">Comprar</button>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- Carrossel de imagens -->
         <div class="carousel">
             <button class="prev">❮</button>
-
-            <img class="carousel-image" src="img/DRA1.jpg" alt="Imagem 1" style="display:none;">
-            <img class="carousel-image" src="img/DRA2.jpg" alt="Imagem 2" style="display:none;">
-            <img class="carousel-image" src="img/DRA3.jpg" alt="Imagem 3" style="display:none;">
-            <img class="carousel-image" src="img/DRA4.jpg" alt="Imagem 4" style="display:none;">
-            <img class="carousel-image" src="img/DRA5.jpg" alt="Imagem 5" style="display:none;">
-            <img class="carousel-image" src="img/DRA6.jpg" alt="Imagem 6" style="display:none;">
+            <img class="carousel-image" src="img/DRA1.jpg" alt="Imagem 1">
+            <img class="carousel-image" src="img/DRA2.jpg" alt="Imagem 2">
+            <img class="carousel-image" src="img/DRA3.jpg" alt="Imagem 3">
+            <img class="carousel-image" src="img/DRA4.jpg" alt="Imagem 4">
+            <img class="carousel-image" src="img/DRA5.jpg" alt="Imagem 5">
+            <img class="carousel-image" src="img/DRA6.jpg" alt="Imagem 6">
             <button class="next">❯</button>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 - Venda de Jogo Online</p>
-    </footer>
+        <section class="reviews">
+            <h2>Avaliações dos Usuários</h2>
+            <div class="review-list" id="review-list">
+            </div>
+            <form id="review-form">
+                <input type="text" id="username" placeholder="Seu nome" required>
+                <textarea id="comment" rows="3" placeholder="Deixe seu comentário..." required></textarea>
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </section>
+    </main>
 
     <script src="Dragonboll.js"></script>
 </body>

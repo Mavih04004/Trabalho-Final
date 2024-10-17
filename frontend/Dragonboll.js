@@ -3,24 +3,39 @@ const prevButton = document.querySelector('.prev');
 const nextButton = document.querySelector('.next');
 let currentImageIndex = 0;
 
-// Função para atualizar a imagem exibida
 function updateImage() {
-  images.forEach((img, index) => {
-    img.style.display = index === currentImageIndex ? 'block' : 'none';
-  });
+    images.forEach((img, index) => {
+        img.style.display = index === currentImageIndex ? 'block' : 'none';
+    });
 }
 
-// Evento de clique para botão "anterior"
 prevButton.addEventListener('click', () => {
-  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-  updateImage();
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImage();
 });
 
-// Evento de clique para botão "próximo"
 nextButton.addEventListener('click', () => {
-  currentImageIndex = (currentImageIndex + 1) % images.length;
-  updateImage();
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateImage();
 });
 
-// Exibir a primeira imagem ao carregar
 updateImage();
+
+// Manipulação de Comentários
+const reviewForm = document.getElementById('review-form');
+const reviewList = document.getElementById('review-list');
+
+reviewForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const comment = document.getElementById('comment').value;
+
+    const reviewItem = document.createElement('div');
+    reviewItem.classList.add('review-item');
+    reviewItem.innerHTML = `<strong>${username}</strong><p>${comment}</p>`;
+
+    reviewList.appendChild(reviewItem);
+
+    reviewForm.reset();
+});

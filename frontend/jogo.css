@@ -15,28 +15,27 @@ main {
     padding: 20px;
 }
 
-/* Estilo para o container geral da imagem, carrossel e detalhes */
+
 .game-info {
-    display: flex;               /* Mantemos o flexbox para alinhamento */
-    align-items: flex-start;     /* Alinha o conteúdo ao topo */
-    margin-bottom: 20px;         /* Espaçamento inferior para o carrossel */
+    display: flex;              
+    align-items: flex-start;    
+    margin-bottom: 20px;     
 }
 
-/* Estilo para a imagem principal */
+
 .main-image {
-    max-width: 400px;            /* Define a largura máxima da imagem principal */
+    max-width: 400px; 
     height: auto;
     border-radius: 10px;
-    margin-right: 20px;          /* Espaçamento entre a imagem e os detalhes */
+    margin-right: 20px; 
 }
 
-/* Container dos detalhes (preço e botão) */
+
 .details-container {
     display: flex;
     flex-direction: column;
 }
 
-/* Estilo para o preço e botão */
 .price-container {
     text-align: left;
 }
@@ -56,48 +55,48 @@ main {
     background-color: #8e44ad;
 }
 
-/* Estilo para o carrossel */
+
 .carousel {
-    position: relative;           /* Necessário para posicionar os botões corretamente */
-    max-width: 400px;            /* Largura máxima do carrossel */
-    height: 200px;               /* Altura fixa para o carrossel */
+    position: relative;      
+    max-width: 400px;            
+    height: 200px;             
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;             /* Espaçamento superior/inferior para o carrossel */
+    margin: 20px 0;     
 }
 
 .carousel-images {
-    display: flex;                /* Coloca as imagens em linha */
-    transition: transform 0.5s ease; /* Transição suave ao mudar de imagem */
-    width: 300%;                 /* Largura total do carrossel */
+    display: flex;               
+    transition: transform 0.5s ease; 
+    width: 300%;                 
 }
 
 .carousel-images img {
-    width: 100%;                 /* As imagens ocupam 100% do espaço do carrossel */
+    width: 100%;              
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
 button.prev, button.next {
-    position: absolute;           /* Para posicionar os botões sobre as imagens */
-    top: 50%;                     /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajusta para centralizar corretamente */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    position: absolute;           
+    top: 50%;                    
+    transform: translateY(-50%); 
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    z-index: 1;                  /* Garante que os botões fiquem sobre as imagens */
+    z-index: 1; 
 }
 
 button.prev {
-    left: 10px;                  /* Alinha o botão "anterior" à esquerda */
+    left: 10px;      
 }
 
 button.next {
-    right: 10px;                 /* Alinha o botão "próximo" à direita */
+    right: 10px;             
 }
 
 footer {
@@ -110,20 +109,20 @@ footer {
     width: 100%;
 }
 header {
-    background: linear-gradient(to right, #8e44ad, #9b59b6); /* Degradê */
+    background: linear-gradient(to right, #8e44ad, #9b59b6);
     color: white;
-    padding: 20px; /* Aumentar o padding */
-    text-align: center; /* Centraliza o texto */
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
-    margin: 0; /* Remove margem padrão */
-    font-size: 2.5em; /* Aumenta o tamanho da fonte */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 0;
+    font-size: 2.5em; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 nav {
-    margin-top: 15px; /* Espaçamento entre título e menu */
+    margin-top: 15px;
 }
 
 nav ul {
@@ -132,51 +131,51 @@ nav ul {
 }
 
 nav ul li {
-    display: inline; /* Mantém os itens do menu na mesma linha */
-    margin: 0 20px; /* Aumenta o espaço entre os itens */
+    display: inline;
+    margin: 0 20px; 
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s, text-shadow 0.3s; /* Transição suave */
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f1c40f; /* Cor ao passar o mouse */
-    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); /* Sombra ao passar o mouse */
+    color: #f1c40f; 
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); 
 }
 
 .search-container {
-    margin-top: 10px; /* Espaçamento acima do campo de busca */
+    margin-top: 10px;
 }
 
 .search-container input {
     padding: 10px;
     width: 200px;
-    border: 2px solid white; /* Borda branca */
+    border: 2px solid white;
     border-radius: 5px;
     margin-right: 5px;
-    transition: border-color 0.3s; /* Transição suave ao passar o mouse */
+    transition: border-color 0.3s;
 }
 
 .search-container input:focus {
-    border-color: #f1c40f; /* Borda amarela ao focar */
-    outline: none; /* Remove a borda padrão do navegador */
+    border-color: #f1c40f; 
+    outline: none;
 }
 
 .search-container button {
     padding: 10px 15px;
-    background-color: #fff; /* Botão branco */
+    background-color: #fff; 
     border: none;
-    color: #9b59b6; /* Cor do texto do botão */
+    color: #9b59b6;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição suave */
+    transition: background-color 0.3s;
 }
 
 .search-container button:hover {
     background-color: #f1c40f; /* Cor ao passar o mouse */
-    color: white; /* Muda a cor do texto ao passar o mouse */
+    color: white;
 }

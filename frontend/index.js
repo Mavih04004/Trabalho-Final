@@ -1,32 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const categorySelect = document.getElementById('category');
-    const games = document.querySelectorAll('.game-item');
+    const gamesContainer = document.querySelector('.games-container');
     const searchInput = document.getElementById('search-input');
+    const categorySelect = document.getElementById('category');
 
-    // Função para filtrar jogos por categoria
-    categorySelect.addEventListener('change', () => {
-        const selectedCategory = categorySelect.value;
 
+    function renderGames(games) {
+        gamesContainer.innerHTML = ''; 
         games.forEach(game => {
-            const gameCategories = game.getAttribute('data-category').split(',');
-            if (selectedCategory === 'todos' || gameCategories.includes(selectedCategory)) {
-                game.style.display = 'block';
-            } else {
-                game.style.display = 'none';
-            }
+            const gameElement = document.createElement('div');
+            gameElement.classList.add('game-item');
+            gameElement.innerHTML = `
+                <img src="img/${game.title.replace(/\s+/g, '')}.jpeg" alt="${game.title}" />
+                <h3>${game.title}</h3>
+                <p>R$ ${game.price.toFixed(2)}</p>
+                <button class="buy-button">Comprar</button>
+            `;
+            gamesContainer.appendChild(gameElement);
         });
-    });
+    }
 
-    // Função de busca de jogos
+    // Função para buscar jogos no backend
+    async function fetchGames(query = '') {
+        const response = await fetch(`/api/jogos/search?q=${query}`);
+        const games = await response.json();
+        renderGames(games);
+    }
+
     searchInput.addEventListener('input', () => {
-        const input = searchInput.value.toLowerCase();
-        games.forEach(game => {
-            const gameTitle = game.getElementsByTagName('h3')[0].innerText.toLowerCase();
-            if (gameTitle.includes(input)) {
-                game.style.display = ''; // Mostra o jogo
-            } else {
-                game.style.display = 'none'; // Oculta o jogo
-            }
-        });
+        const query = searchInput.value;
+        fetchGames(query);
     });
+
+
+    fetchGames();
 });

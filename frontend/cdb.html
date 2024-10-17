@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Dragon Ball</title>
+    <link rel="stylesheet" href="cdb.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Checkout - Dragon Ball Z</h1>
+    </header>
+
+    <main class="checkout-container">
+        <section class="order-summary">
+            <h2>Resumo do Pedido</h2>
+            <div class="product">
+                <img src="img/dbsz.jpg" alt="Jogo Dragon Ball Z">
+                <div class="product-info">
+                    <p><strong>Dragon Ball Z</strong></p>
+                    <p>Preço: R$ 49,90</p>
+                </div>
+            </div>
+        </section>
+
+        <form class="checkout-form">
+            <h2>Informações de Pagamento</h2>
+            <label for="name">Nome Completo:</label>
+            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+
+            <h3>Método de Pagamento</h3>
+            <label>
+                <input type="radio" name="payment" value="credit-card" checked> Cartão de Crédito
+            </label>
+            <label>
+                <input type="radio" name="payment" value="boleto"> Boleto Bancário
+            </label>
+
+            <div class="card-info">
+                <label for="card-number">Número do Cartão:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000">
+
+                <label for="expiry-date">Validade:</label>
+                <input type="month" id="expiry-date" name="expiry-date">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123">
+            </div>
+
+            <button type="submit" id="finalizar-compra">Finalizar Compra</button>
+        </form>
+    </main>
+    <script src="cdb.js"></script>
+</body>
+</html>

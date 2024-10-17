@@ -3,100 +3,100 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f5f5f5; /* Cor de fundo leve */
-  color: #000000; /* Cor do texto principal */
+  background-color: #f5f5f5;
+  color: #000000; 
 }
 
 .header {
-  background: linear-gradient(to right, #8e44ad, #9b59b6); /* Degradê */
-  color: #ffffff; /* Cor do texto do cabeçalho */
-  padding: 10px; /* Reduzido o padding */
+  background: linear-gradient(to right, #8e44ad, #9b59b6);
+  color: #ffffff;
+  padding: 10px; 
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* Limita a largura máxima do cabeçalho */
-  margin: auto; /* Centraliza o cabeçalho */
+  max-width: 1200px;
+  margin: auto; 
 }
 .logo {
-  max-height: 70px; /* Limita a altura do logo */
+  max-height: 70px; 
 }
 
 .nav {
-  margin-top: 15px; /* Espaçamento entre título e menu */
+  margin-top: 15px;
 }
 
 .nav ul {
   list-style-type: none;
   padding: 0;
-  display: flex; /* Exibe os itens do menu em linha */
+  display: flex;
 }
 
 .nav a {
-  color: #ffffff; /* Cor do texto alterada para branco */
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s, text-shadow 0.3s; /* Transição suave */
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .nav a:hover {
-  color: #f1c40f; /* Cor ao passar o mouse */
-  text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); /* Sombra ao passar o mouse */
+  color: #f1c40f;
+  text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); 
 }
 
 .search-form {
   display: flex;
-  align-items: center; /* Alinha verticalmente o campo de busca */
-  margin-left: 20px; /* Adiciona espaço à esquerda da barra de pesquisa */
+  align-items: center; 
+  margin-left: 20px; 
 }
 
 .search-form input {
   padding: 10px;
-  width: 250px; /* Aumenta a largura do campo de busca */
-  border: 2px solid white; /* Borda branca */
+  width: 250px; 
+  border: 2px solid white; 
   border-radius: 5px;
   margin-right: 5px;
-  transition: border-color 0.3s; /* Transição suave ao passar o mouse */
+  transition: border-color 0.3s;
 }
 
 .search-form input:focus {
-  border-color: #ffffff; /* Borda amarela ao focar */
-  outline: none; /* Remove a borda padrão do navegador */
+  border-color: #ffffff; 
+  outline: none;
 }
 
 .search-button {
   padding: 10px 15px;
-  background-color: #ffffff; /* Cor de fundo do botão */
-  color: #343a40; /* Cor do texto do botão */
+  background-color: #ffffff;
+  color: #343a40; 
   border: none;
-  border-radius: 5px; /* Borda arredondada */
+  border-radius: 5px; 
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 
 .search-button:hover {
-  background-color: #e0b800; /* Cor de hover do botão */
+  background-color: #e0b800;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  margin: 15px 0; /* Diminuiu a margem entre os containers */
+  margin: 15px 0; 
   gap: 1px;
 }
 
 .profile,
 .sidebar,
 .games {
-  background: #ffffff; /* Cor de fundo das seções */
+  background: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
-  max-width: 1200px; /* Limita a largura máxima da seção */
-  margin: 3px auto; /* Reduziu a margem para 5px nas laterais */
+  max-width: 1200px; 
+  margin: 3px auto; 
   text-align: center;
 }
 
@@ -111,7 +111,7 @@ body {
   height: 100px;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 2px solid #343a40; /* Borda da imagem do perfil */
+  border: 2px solid #343a40;
 }
 
 .sidebar {
@@ -138,34 +138,34 @@ li {
   justify-content: space-between;
 }
 .friend-list {
-  list-style-type: none; /* Remove os marcadores padrão */
-  padding: 0; /* Remove o padding */
-  margin: 10px 0; /* Margem acima e abaixo da lista */
-  display: flex; /* Exibe os itens em linha */
-  flex-direction: column; /* Alinha os itens em coluna */
-  gap: 10px; /* Espaçamento entre os itens */
+  list-style-type: none; 
+  padding: 0; 
+  margin: 10px 0; 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
 }
 
 .friend-list li {
-  background: #f8f9fa; /* Cor de fundo clara para os itens da lista */
-  padding: 10px; /* Espaçamento interno */
-  border-radius: 8px; /* Bordas arredondadas */
-  display: flex; /* Flexbox para alinhamento */
-  align-items: center; /* Alinha verticalmente */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+  background: #f8f9fa; 
+  padding: 10px; 
+  border-radius: 8px;
+  display: flex; 
+  align-items: center; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .friend-list li:hover {
-  transform: translateY(-2px); /* Elevação ao passar o mouse */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .friend-pic {
-  width: 40px; /* Aumenta a largura da imagem */
-  height: 40px; /* Aumenta a altura da imagem */
-  border-radius: 50%; /* Faz as imagens ficarem circulares */
-  margin-right: 10px; /* Espaço entre a imagem e o nome do amigo */
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  margin-right: 10px; 
 }
 
 
@@ -216,7 +216,7 @@ li {
 .games ul li:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  background-color: #f0f0f5; /* Cor ao passar o mouse nos jogos */
+  background-color: #f0f0f5; 
 }
 
 .games ul li img {
